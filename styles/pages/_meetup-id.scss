@@ -1,0 +1,49 @@
+@import '../Shared.scss';
+
+.meetup-article{
+    max-width: 800px;
+    margin: auto;
+    padding: 2.5rem 1rem 1rem 1rem;
+    color: white;
+    animation: fade-in 0.5s linear;
+
+    h1{
+        font-size: 1.5rem;
+        padding-top: 0.5rem;
+    }
+
+    p{
+        padding-top: 0.5rem;
+    }
+
+    &__home-nav{
+        padding-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+        transition: $standard_transition;
+        bottom: 0;
+        width: max-content;
+        margin-bottom: 0.5rem;
+
+        p{
+            padding: 0;
+        }
+
+        @include states(){
+            cursor: pointer;
+            color: $brand_color_five;
+        }
+    }
+
+    &__image{
+        object-fit: contain;
+        width: 100%;
+        max-height: 450px;
+    }
+
+    svg{
+        max-height: 450px;
+    }
+
+}

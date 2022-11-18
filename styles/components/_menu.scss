@@ -1,0 +1,107 @@
+@import '../Shared.scss';
+
+/* Styling imported from: https://github.com/negomi/react-burger-menu#styling */
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    left: initial;
+    right: 1rem;
+    top: 1.5rem;
+    
+    @include state(){
+        animation: pulse-shrink 1.5s linear infinite;
+        will-change: transform;
+    }
+}
+
+ 
+/* Color/shape of burger icon bars */
+span.bm-burger-bars {
+    background: white;
+    height: 5px;
+    border-radius: 4px;
+    transition: $standard_transition;
+
+    @include state(){
+        background: white;
+    }
+
+}
+
+/* Position of the overlay over the page */
+.bm-overlay {
+    top: 0;
+    left: 0;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+    height: 36px;
+    width: 36px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+    background: #bdc3c7;
+    height: 24px !important;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+    position: fixed;
+    height: 100%;
+    top: 0;
+
+    @include breakpoint(mobile){
+        width: 100% !important;
+    }
+}
+
+/* General sidebar styles */
+.bm-menu {
+    background: $brand_gradient_one;;
+    background-size: $gradient_bg_size;
+    padding: 1rem;
+    font-size: 1.15em;
+    box-shadow: $brand_box_shadow;
+    transition: $standard_transition;
+
+    a{
+        display: block;
+        color: white;
+        transition: $standard_transition;
+        text-decoration: none;
+        font-size: 1.5rem;
+
+        @include state(){
+            color: #fcb8d2;
+        }
+    }
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+    fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+    color: #b8b7ad;
+    padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+    display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+}

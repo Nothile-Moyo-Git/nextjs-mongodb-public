@@ -1,0 +1,33 @@
+@import '../Shared.scss';
+
+.card {
+    background: $brand_gradient_one;
+    background-size: $gradient_bg_size;
+    border-radius: 6px;
+    box-shadow: $brand_box_shadow_small;
+    max-width: 40rem;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 1rem;
+    justify-content: space-between;
+    transition: all 0.2s linear;    
+    animation: gradient 5s linear infinite, fade-in 0.5s linear;
+    opacity: 0;    
+    will-change: background-position, opacity, transform;
+
+    &.fade-in{
+        transition: opacity 0.3s linear, bottom 0.2s linear;
+        opacity: 1;
+        will-change: opacity;
+    }
+
+    &--form{
+        animation: gradient 5s linear infinite, fade-in 0.3s linear;
+        transition: opacity 0.5s linear;
+        opacity: 1;
+        will-change: background-position, opacity;
+    }
+}

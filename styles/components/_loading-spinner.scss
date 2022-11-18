@@ -1,0 +1,63 @@
+@import '../Shared.scss';
+
+.spinner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 35vh;
+
+    &__text{
+        color: white;
+        position: relative;
+        margin-top: 1rem;
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    &__heart {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+        transform: rotate(45deg);
+        transform-origin: 40px 40px;
+        border: 1px solid $brand_color_five;
+
+        span{
+            top: 32px;
+            left: 32px;
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            background: $brand_color_five;
+            animation: pulse-heart 3s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+            will-change: transform;
+
+            &::after,&::before{
+                content: " ";
+                position: absolute;
+                display: block;
+                width: 32px;
+                height: 32px;
+                background: $brand_color_five;
+            }
+
+            &::before{
+                top: -24px;
+                border-radius: 50% 50% 0 0;
+            }
+
+            &::after{
+                left: -24px;
+                border-radius: 50% 0 0 50%;
+            }
+        }
+    }
+
+    &__text{
+        color: $brand_color_five;
+    }
+
+}

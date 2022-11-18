@@ -1,0 +1,177 @@
+// Slowly increase opacity of the card
+@keyframes fade-in{
+    0%{ 
+      opacity: 0; 
+    }
+    100%{ 
+      opacity: 1; 
+    }
+}
+
+// Increase opacity of the card and slide into the screen
+@keyframes slide-in{
+    0%{
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100%{
+      -webkit-transform: translateX(0);
+
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+// Change the gradient of the colors assuming the background size is big enough
+@keyframes gradient{
+    0%{ background-position: 0% 0%; }
+    50%{ background-position: 100% 100%; }
+    100%{ background-position: 0% 0%; }
+}
+
+@keyframes fast-gradient-headert{
+
+  0%{
+    transform: translateX(0%);
+  }
+
+  25%{
+    transform: translateX(25%);
+  }
+
+  75%{
+    transform: translateX(75%);
+  }
+
+  100%{
+    transform: translateX(0%);
+  }
+
+}
+
+@keyframes fast-gradient-card{
+
+  0%{
+    transform: translateX(0%);
+  }
+
+  25%{
+    transform: translateX(-25%);
+  }
+
+  75%{
+    transform: translateX(25%);
+  }
+
+  100%{
+    transform: translateX(0%);
+  }
+
+}
+
+// Pulse hover effect
+@keyframes pulse{
+    0%{ 
+      -webkit-transform: scale(1);
+
+      transform: scale(1);      
+    }
+    50%{ 
+      -webkit-transform: scale(1.03);
+      
+      transform: scale(1.03); 
+    }
+    100%{ 
+      -webkit-transform: scale(1);
+
+      transform: scale(1); 
+    }
+} 
+
+@keyframes pulse-shrink{
+  0%{ 
+    -webkit-transform: scale(1);
+
+    transform: scale(1); 
+  }
+  50%{
+    -webkit-transform: scale(0.90);
+    
+    transform: scale(0.90); 
+  }
+  100%{ 
+    -webkit-transform: scale(1);
+
+    transform: scale(1); 
+  }
+}
+
+// Spin effect
+@keyframes spin {
+    0% {
+      -webkit-transform: rotate(45deg);
+
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+
+      transform: rotate(360deg);
+    }
+  }
+
+// Bouncing effect
+@keyframes bounce {
+  0%{ 
+    -webkit-transform: translateY(0);
+
+    transform: translateY(0);
+  }
+  50%{ 
+    -webkit-transform: translateY(5rem);
+
+    transform: translateY(5rem); 
+  }
+  100%{ 
+    -webkit-transform: translateY(0);
+
+    transform: translateY(0); 
+  }
+}
+
+// Loading spinner heart animation
+@keyframes pulse-heart {
+  0% {
+    -webkit-transform: scale(0.95);
+
+    transform: scale(0.95);
+  }
+  5% {
+    -webkit-transform: scale(1.1);
+
+    transform: scale(1.1);
+  }
+  39% {
+    -webkit-transform: scale(0.85);
+
+    transform: scale(0.85);
+  }
+  45% {
+    -webkit-transform: scale(1);
+
+    transform: scale(1);
+  }
+  60% {
+    -webkit-transform: scale(0.95);
+
+    transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(0.9);
+
+    transform: scale(0.9);
+  }
+}
+
+// Standard transition
+$standard_transition: all 0.15s linear;

@@ -1,0 +1,29 @@
+// Red brand colors
+$brand_color_one: #77002e;
+$brand_color_two: #910038;
+$brand_color_three: #5e0024;
+$brand_color_four: #44001a;
+$brand_color_five: #aa0042;
+
+// Orange-ish brand colors
+$brand_color_six: #BC3823;
+$brand_color_seven: #FFBF00;
+
+// backdrop
+$backdrop_color_one: rgb(30, 32, 42);
+
+// box shadows
+$box_shadow: ( 0px 0px 20px 0px rgba(0,0,0,0.4) );
+$button_shadow: ( 0px 0px 15px 0px rgba(0,0,0,0.2) );
+$brand_box_shadow: ( 0px 0px 15px 0px $brand_color_one );
+$brand_box_shadow_small: ( 0px 0px 8px 0px $brand_color_one );
+
+// gradients
+$gradient_bg_size: 300% 300%;
+$brand_gradient_one: linear-gradient(60deg, $brand_color_one, $brand_color_five, $brand_color_three, $brand_color_two);
+$brand_gradient_two: linear-gradient(60deg, $brand_color_one, $brand_color_two, $brand_color_three);
+$brand_gradient_three: linear-gradient(to right, $brand_color_one, $brand_color_six, $brand_color_seven);
+
+// Gaps
+$gap: 1rem;
+$gap-double: 2rem;

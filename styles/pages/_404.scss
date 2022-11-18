@@ -1,0 +1,31 @@
+@import '../Shared.scss';
+
+.page-404{
+    padding: 3rem 1rem;
+    display: flex;
+    grid-row-gap: 1rem;
+    max-width: 40rem;
+    margin: auto;
+    flex-direction: column;
+    color: white;
+
+    &__title{
+        font-size: 1.5rem;
+    }
+
+    &__link,a {
+        color: white;
+        transition: $standard_transition;
+        text-decoration: underline;
+        cursor: pointer;
+
+        &:visited{
+            color: #dd99b3;
+        }
+
+        @include states(){
+            color: $brand_color_one;
+        }
+    }
+
+}

@@ -1,0 +1,55 @@
+@import "../../styles/Shared.scss";
+
+.gradientCard{
+    display: flex;
+    max-width: 40rem;
+    margin: 1rem auto 0 auto;
+    width: 100%;
+    height: 100%;
+    color: white;
+    position: relative;
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: $brand_box_shadow_small;
+    max-width: 40rem;
+    align-items: stretch;
+    grid-row-gap: 0.5rem;
+    animation: fade-in 0.25s linear;
+    opacity: 0;
+}
+
+.gradientBackground{
+    width: 200%;
+    top: 0;
+    right: 50%;
+    height: 100%;
+    background: $brand_gradient_one;
+    animation: fast-gradient-card 10s linear infinite;
+    position: relative;
+    will-change: transform;
+}
+
+.gradientWrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.gradientContent{
+    z-index: 2;
+    width: 100%;
+}
+
+div.gradientForm{
+    margin: 0;
+}
+
+div.fadeIn{
+    transition: opacity 0.3s linear, bottom 0.2s linear;
+    opacity: 1;
+    will-change: opacity;
+}

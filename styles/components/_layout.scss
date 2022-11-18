@@ -1,0 +1,18 @@
+@import '../Shared.scss';
+
+.layout {
+  background: black;
+  min-height: 100vh;
+
+  &--fixed{
+    height: 100vh;
+  }
+
+  &__content{
+    padding-top: 5rem;
+    min-height: 100vh;
+    z-index: 1;
+    position: relative;
+  }
+
+}

@@ -1,0 +1,11 @@
+@import "../../Shared.scss";
+
+.image-fallback{
+    height: 100%;
+    animation: fade-in 0.25s linear;
+
+    svg{
+        width: 100%;
+        height: 100%;
+    }
+}

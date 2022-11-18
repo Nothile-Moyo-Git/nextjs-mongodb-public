@@ -1,0 +1,64 @@
+@import '../Shared.scss';
+
+.main-navigation{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    position: fixed;
+    z-index: 10;
+
+    &__background{
+        width: 200%;
+        top: 0rem;
+        right: 0%;
+        height: 100%;
+        background: $brand_gradient_one;
+        box-shadow: $brand_box_shadow;
+        animation: fast-gradient-header 5s linear infinite;
+        position: absolute;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: baseline;
+        width: 100%;
+        flex-wrap: wrap;
+        grid-row-gap: 0.5rem;
+        grid-column-gap: 2rem;
+    }
+
+    li {
+        text-align: center;
+
+        @include breakpoint(tablet){
+            width: 100%;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: #fcb8d2;
+        transition: $standard_transition;
+
+        @include states() {
+            color: white;
+        }
+    }
+
+    &__logo{
+        font-size: 2rem;
+        color: white;
+        font-weight: bold;
+        z-index: 15;
+    }
+
+}
+
+  

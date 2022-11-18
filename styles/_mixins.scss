@@ -1,0 +1,19 @@
+/* Mixins such as state */
+
+@mixin state(){
+    &:hover, &:focus{ @content; }
+}
+
+@mixin states(){
+    &:hover, &:focus, &:active{ @content; }
+}
+
+// Light theme
+@mixin light-theme{
+    @media (prefers-color-scheme: light) { @content; }
+}
+
+// Dark theme
+@mixin dark-theme{
+    @media (prefers-color-scheme: dark) { @content; }
+}

@@ -1,0 +1,108 @@
+@import '../Shared.scss';
+
+.home{
+
+  margin-bottom: 2rem;
+
+  .container {
+    padding: 0 2rem;
+  }
+
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title {
+    margin: 0;
+    line-height: 1.15;
+    font-size: 4rem;
+    text-align: center;
+    color: white;
+
+    a {
+      color: #0070f3;
+      text-decoration: none;
+
+      @include states(){
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .description {
+    margin: 4rem 0;
+    line-height: 1.5;
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+  }
+
+  .code {
+    background: #fafafa;
+    border-radius: 5px;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+
+  .grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+  }
+
+  .card {
+    padding: 1rem;
+    text-align: left;
+    color: white;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    position: relative;
+    bottom: 0rem;
+
+    @include states(){
+      border-color: white;
+      bottom: 1rem;
+    }
+
+    h2 {
+      margin: 0 0 1rem 0;
+      font-size: 1.5rem;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1.25rem;
+      line-height: 1.5;
+    }
+  }
+
+  .logo {
+    height: 1rem;
+    margin-left: 0.5rem;
+  }
+
+  @media (max-width: 600px) {
+    .grid {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+
+  @include dark-theme{
+    .card, .footer {
+      border-color: #222;
+    }
+    .code {
+      background: #111;
+    }
+  }
+
+}
