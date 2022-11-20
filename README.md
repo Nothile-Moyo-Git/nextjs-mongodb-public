@@ -1,12 +1,13 @@
 # Next.js MongoDB Meetup App
 ## This is my meetup app built in Next.js, React, SCSS modules & MongoDB
-This App is a CRUD app in order to start learning about Next.js, SCSS Modules and MongoDB for the MERN stack. Having spent a lot of time in vanilla React and doing it as a day job, I've been lookng to take a step in the next direction. I also learned about concepts such as CSS painting, CSR, ISR & SSR. CICD by use of Vercel, and also dynamic importing for performance.
 
-Users go to the homepage and view a list of cards with meetups. These are called using getServerSideProps and filtered. Components are used to render the lists and cards. Some meetups are unprocted and will miss the X button in the top right and won't have an edit button. New cards will be unprotected and can be edited. Cards also have a "fallback" image component which uses next/image for lazyloading, and an optimized SVG if the filetype of the image isn't valid
+#### This App is a CRUD app in order to start learning about Next.js, SCSS Modules and MongoDB for the MERN stack. Having spent a lot of time in vanilla React and doing it as a day job, I've been lookng to take a step in the next direction. I also learned about concepts such as CSS painting, CSR, ISR & SSR. CICD by use of Vercel, and also dynamic importing for performance.
 
-It was a fun project! But definitely hard, I started using websockets instead of only API queries, and had performance issues in regards to painting and bundling. It was a good exercise in maximizing performance in a more scalable solution.
+#### Users go to the homepage and view a list of cards with meetups. These are called using getServerSideProps and filtered. Components are used to render the lists and cards. Some meetups are unprocted and will miss the X button in the top right and won't have an edit button. New cards will be unprotected and can be edited. Cards also have a "fallback" image component which uses next/image for lazyloading, and an optimized SVG if the filetype of the image isn't valid
 
-The App uses next/router and Next.js pages in order to perform routing. The private repo has the endpoints which are used to perform queries to the MongoDB backend using Mongoshell connected via sockets. The endpoints can be found via the /api folder. Fallback pages have been implemented for production.
+#### It was a fun project! But definitely hard, I started using websockets instead of only API queries, and had performance issues in regards to painting and bundling. It was a good exercise in maximizing performance in a more scalable solution.
+
+#### The App uses next/router and Next.js pages in order to perform routing. The private repo has the endpoints which are used to perform queries to the MongoDB backend using Mongoshell connected via sockets. The endpoints can be found via the /api folder. Fallback pages have been implemented for production.
 
 SCSS/SCSS modules is used in order to style the app. I ran into significant performance issues with my gradient background and falling stars due to using too much of the CPU and not respecting painting rules. So I moved most animations over to the GPU ( by using transform ) and this netted me a 40% performance bump.
 
